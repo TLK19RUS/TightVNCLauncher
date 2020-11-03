@@ -16,5 +16,18 @@ namespace TightVNCLauncher
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            listBox1.DisplayMember = "Display";
+            listBox1.ValueMember = "host";
+            listBox1.DataSource = Program.hosts;
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Program.hosts.Add(new THost("inspektore", "inspektore","Yflt;lf0"));
+        }
     }
 }
